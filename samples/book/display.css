@@ -1,0 +1,328 @@
+@import url('https://fonts.googleapis.com/css?family=Cormorant+Garamond|Josefin+Sans|Slabo+27px');
+
+body { background: hsla(172, 50%, 40%,1);
+   background: linear-gradient(35deg,hsla(226, 100%, 12%,1), hsla(172, 50%, 40%,1) 80%, hsla(140, 42%, 74%, 1));
+   color: hsl(0, 0%, 100%);
+   font-family: 'Slabo 27px', 'Book Antiqua', Palatino, Georgia, serif;
+   margin: 0;
+}
+
+#wrapper { margin: 0 auto;
+   min-width: 304px;
+   padding: 0.5rem;
+   max-width: 1100px;
+}
+
+header h1 { text-align: center;
+   font-size: 3.5rem;
+   font-family: 'Cormorant Garamond', 'Book Antiqua', Georgia, serif;
+}
+
+h2, h3, table th, a { font-family: 'Josefin Sans', Impact, 'Franklin Gothic Bold', 'Arial Black', sans-serif;
+}
+
+a { color: hsl(0, 0%, 100%);
+}
+
+h1, h2, h3 { color: hsl(0, 0%, 80%);
+}
+
+.aura { color: white;
+   background: linear-gradient(to top, 
+      hsl(0, 0%, 100%) 16%,
+      hsl(46, 100%, 78%) 32%,
+      hsl(46, 80%, 65%) 48%,
+      hsl(46, 80%, 65%) 64%,
+      hsl(46, 100%, 78%) 80%,
+      hsl(0, 0%, 100%) 100%
+   );
+   background-size:  auto 200%;
+   -webkit-background-clip: text;
+   background-clip: text;
+   -webkit-text-fill-color: transparent;
+   /*text-fill-color: transparent;*/
+   animation: shine reverse 12s linear infinite;
+}
+
+@keyframes shine{
+	to { background-position: center 200%;
+	}
+}
+
+nav ul, footer ul { list-style-type: none;
+   padding-left: 0;
+   display: flex;
+   justify-content: center;
+   flex-wrap: wrap;
+}
+
+nav ul li, #buy ul li { margin: 0.25rem;
+}
+
+nav ul li a, table td a, #buy ul li a, #back-to-top a { padding: 0.75rem 0.5rem 0.5rem 0.5rem;
+   text-decoration: none;
+   text-transform: uppercase;
+   border: 2px solid;
+   text-align: center;
+}
+
+nav ul li a, table td a, #buy ul li a { display: block;
+}
+
+.page-section { margin-bottom: 2rem;
+}
+
+h2 { font-size: 1.75rem;
+   margin-bottom: 0.5rem;
+}
+
+img { display: block;
+   width: 100%;
+}
+
+figcaption { font-size: 0.9rem;
+   font-style: italic;
+   margin-top: 0.25rem;
+   margin-bottom: 0.75rem;
+}
+
+#alethiometer-image img { max-width: 430px;
+}
+
+#book-cover, #buy-cover, #author-photo{ max-width: 270px;
+}
+
+#alethiometer-image img, #book-cover, #author-photo { 
+   margin: 0 auto;
+}
+
+#audio-cover { max-width: 400px;
+}
+
+.title { font-style: italic;
+}
+
+.source { display: inline-block;
+   line-height: 2.5rem;
+   margin-left: 2rem;
+   vertical-align: -60%;
+}
+
+#copy { text-align: center;
+	font-size: 0.9rem;
+}
+
+table { width: 100%;
+   border-collapse: collapse;
+}
+
+table caption { font-size: 1.15rem;
+   margin-bottom: 1rem;
+}
+
+table th { font-size: 1.3rem;
+   font-weight: normal;
+}
+
+table th:first-child { text-align: left;
+}
+
+table tr:nth-child(even) { background-color:hsla(46, 65%, 52%, 0.7);
+}
+
+table td { padding-top: 1rem;
+   padding-bottom: 1rem;
+   padding-left: 0.2rem;
+   padding-right: 0.2rem;
+}
+
+table td:nth-child(4), table th:nth-child(4) { padding-right: 0.25rem;
+}
+
+table td a, #buy ul li a, nav ul li a { color: hsl(0, 0%, 100%);
+}
+
+.buy-column div img, #buy ul li a { margin-left: auto;
+   margin-right: auto;
+}
+
+#buy ul { list-style-type: none;
+   padding-left: 0;
+}
+
+#buy ul li { margin-top: 0.5rem;
+   margin-bottom: 0.5rem;
+}
+
+#buy ul li a { max-width: 393px;
+}
+
+footer { margin-top: 2rem;
+   border-top: 2.5px solid hsl(40, 60%, 50%);
+}
+
+.social img { width: 50px;
+	margin-left: 0.5rem;
+	margin-right: 0.5rem;
+}
+
+#back-to-top { margin-top: 2.5rem;
+   text-align: right;
+}
+
+#copy { margin-top: 3.5rem;
+}
+
+@media only screen and (min-width: 680px) {
+   #wrapper { padding: 0.5rem 1.5rem;
+   }
+
+   nav ul li { margin-left: 1.5rem;
+      margin-right: 1.5rem;
+   }
+
+   nav ul li a:hover { -webkit-transition: color 0.25s ease-in-out;
+      -moz-transition: color 0.25s ease-in-out;
+      -ms-transition: color 0.25s ease-in-out;
+      -o-transition: color 0.25s ease-in-out;
+      transition: color 0.25s ease-in-out;
+      color: hsl(46, 80%, 65%);
+   }
+
+   table td a:hover, #buy ul li a:hover, #back-to-top a:hover {  -webkit-transition: color 0.25s ease-in-out;
+      -moz-transition: color 0.25s ease-in-out;
+      -ms-transition: color 0.25s ease-in-out;
+      -o-transition: color 0.25s ease-in-out;
+      transition: color 0.25s ease-in-out;
+      color: hsl(0, 0%, 65%);
+   }
+
+   header h1 { font-size: 5rem;
+      margin-bottom: 0;
+   }
+
+   #book-cover { float: left;
+      margin-right: 1rem;
+   }
+
+   blockquote { margin-left: 0;
+   }
+	
+   #author-photo { margin-right: 1rem;
+      margin-left: 0;
+	}
+	
+	.first-p { margin-top: 0;
+	}
+
+   #blurbs, #tour { clear: both;
+   }
+
+   .flex-container { display: flex;
+   }
+
+   .buy-section img { flex-shrink: 0;
+   }
+	
+	#author p { max-width: 85ch;
+	}
+	
+   table { width: 100%;
+      margin: 0 auto;
+   }
+
+   table th:nth-child(2), table th:nth-child(3) { text-align: left;
+   }
+
+   table td { text-transform: uppercase;
+   }
+
+   table td:nth-child(1) { text-align: center;
+   }
+
+   table th:nth-child(1), table td:nth-child(1) { padding-right: 2rem;
+   }
+
+   table th:first-child { text-align: center;
+   }
+
+   table td:nth-child(4), table th:nth-child(4) { padding-right: 1rem;
+   }
+
+   span.month { display: block;
+      font-weight: bold;
+   }
+
+   .buy-column:first-child { margin-right: 2rem;
+   }
+
+   .buy-content { justify-content: space-between;
+   }
+   
+   .social a:hover { -webkit-transition: filter 0.25s ease-in-out;
+      -moz-transition: filter 0.25s ease-in-out;
+      -ms-transition: filter 0.25s ease-in-out;
+      -o-transition: filter 0.25s ease-in-out;
+      transition: filter 0.25s ease-in-out;
+      filter: opacity(50%);
+   }
+
+   .buy-column h3 { margin-bottom: 0.25rem;
+   }
+
+   #summary { margin-bottom: 4.5rem;
+   }
+/* end 680px media query */}
+
+@media only screen and (min-width: 915px) {
+   .large-flex-container { display: flex;
+   }
+
+   #alethiometer-image { order: 2;
+      flex-shrink: 0;
+      margin-top: 20%;
+      z-index: 1;
+      margin-left: 1rem;
+   }
+
+   #hand-container { margin-bottom: -114%;
+      z-index: 2;
+   }
+
+   #ticking-hand { width: 0;
+      height: 0;
+      border-bottom: 321px solid hsl(12, 86%, 20%);
+      border-left: 5px solid transparent;
+      border-right: 5px solid transparent;
+      position: relative;
+      right: -99%;
+      transform-origin: 50% 100%;
+   }
+
+   @keyframes rotate {
+      25% { transform: rotateZ(-30deg);
+      }
+
+      50% { transform: rotateZ(-90deg);
+      }
+
+      75% { transform: rotateZ(-159deg);
+      }
+
+      100% { transform: rotateZ(0deg);
+      }
+   }
+/* end 915px media query */}
+
+@media only screen and (min-width: 980px) {
+   .largest-flex-container { display: flex;
+   }
+
+   #buy ul { margin-left: 0.5rem;
+		margin-top: auto;
+		margin-bottom: auto;
+   }
+
+   #buy ul li { margin: 1.25rem 0;
+	}
+/* end 980px media query */}
