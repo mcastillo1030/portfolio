@@ -1,2 +1,2 @@
 # My Portfolio
-This includes some of my fron- and back-end design and development work. 
+This includes some of my front- and back-end design and development work. 
