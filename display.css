@@ -1,0 +1,170 @@
+@import url("https://use.typekit.net/rrd3vhw.css");
+
+:root { --page-background: hsl(239, 35%, 28%);
+   --card-background: hsl(0, 0%, 99%);
+   --border-color: hsl(18, 89%, 72%);
+   --accent-color: hsl(348, 53%, 58%);
+   --name-font: utopia-std-headline, serif;
+   --bio-font: font-family: acumin-pro, sans-serif;
+   --header-font: utopia-std-subhead, serif;
+   --body-font: acumin-pro, sans-serif;
+   --button-color: hsl(357, 57%, 53%);
+}
+
+body { background: var(--page-background);
+   background: linear-gradient(to top right, hsla(239,35%,28%,1) 0%, hsla(239, 35%, 38%,1) 35%, hsla(239, 35%, 48%,1) 75%); 
+   max-width: 1024px;
+}
+
+body, #photo-container { margin: 0 auto;
+}
+
+#wrapper { max-width: 85%;
+   margin: 4rem auto 2rem auto;
+}
+
+#card { background-color: var(--card-background);
+   padding: 1.5rem;
+   border: 0.2rem solid var(--border-color);
+   box-shadow: -0.3rem 0.3rem var(--border-color);
+}
+
+#card, div.sample-card, #email { border-radius: 0.2rem;
+}
+
+img { width: 100%;
+}
+
+#photo-container { max-width: 150px;
+}
+
+#marlon-photo { border-radius: 50%;
+   border: 0.3rem solid var(--accent-color);
+}
+
+div.name h1 { font-family: var(--name-font);
+   font-size: 1.8rem;
+   text-align: center;
+}
+
+div.name h1, div.card-section h2,
+div.card-section p { font-style: normal;
+}
+
+div.name h1, #bio, div.card-section p { font-weight: 400;
+}
+
+#bio { font-style: italic;
+   line-height: 1.3rem;
+   margin-top: 2rem;
+}
+
+#bio::before { content: '';
+   display: block;
+   width: 15%;
+}
+
+#bio::before { border-bottom: 0.2rem solid var(--accent-color);
+}
+
+a.body-link { border-bottom: 0.2rem solid var(--button-color);
+}
+
+#bio::before, div.card-section h2 { margin-bottom: 0.25rem;
+}
+
+#bio::before, #email { margin-left: auto;
+   margin-right: auto;
+}
+
+div.card-section h2 { font-family: var(--header-font);   
+   font-weight: 700;
+   text-transform: lowercase;
+   margin-top: 3rem;
+}
+
+body p { font-family: var(--body-font);
+   font-size: 0.95rem;
+   line-height: 1.5rem;
+}
+
+body a { text-decoration: none;
+   color: inherit;
+}
+
+a.body-link:hover { border-bottom: none;
+}
+
+div.sample-card, #email { background-color: var(--button-color);
+   border: 0.2rem solid var(--button-color);
+}
+
+div.sample-card { transition: 500ms ease all;
+}
+
+div.sample-card:hover { transform: scale(1.05);
+}
+
+div.card-title { padding: 0.2rem;
+}
+
+div.card-title p { color: var(--card-background);
+   margin-top: 0.1rem;
+   margin-bottom: 0.1rem;
+}
+
+#email { display: block;
+   padding: 0.75rem 0.25rem;
+   text-align: center;
+   font-family: var(--header-font);
+   color: var(--card-background);
+   max-width: 16rem;
+   font-size: 0.95rem;
+}
+
+#email:hover { background-color: var(--card-background);
+   color: inherit;
+}
+
+div.contact { margin-bottom: 1rem;
+}
+
+#social-links { padding-left: 0;
+   list-style-type: none;
+   display: flex;
+   justify-content: space-around;
+   align-items: center;
+   margin: 1.5rem auto;
+   max-width: 280px;
+}
+
+#social-links li { width: 1.5rem;
+}
+
+#social-links li a img:hover { filter: opacity(70%);
+}
+
+#copyright { margin-top: 4rem;
+   color: var(--card-background);
+}
+
+#samples-grid { margin-top: 1.25rem;
+   display: grid;
+   grid-template-columns: repeat(auto-fill, minmax(12rem, 1fr));
+   grid-gap: 1rem 1.5rem;
+}
+
+@media only screen and (min-width: 530px) {
+   #photo-container { margin-left: 0;
+      margin-right: 1.75rem;
+      max-width: 200px;
+   }
+
+   div.row { display: flex;
+      justify-content: space-around;
+      align-items: center;
+      max-width: 540px;
+      margin-left: auto;
+      margin-right: auto;
+   }
+/* end 420px media query */}

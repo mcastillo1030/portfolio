@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="eng">
+	<head>
+		<meta charset="utf-8">
+		<meta name="description" content="Listen to the real stories behind some of the world's most well-known folklore.">
+		<meta name="viewport" content="width=device-width, intitial-scale=1">
+		<meta name="author" content="Marlon Castillo">
+      <link rel="stylesheet" href="display.css">
+		<script src="https://kit.fontawesome.com/3d927e8363.js" crossorigin="anonymous"></script>
+		<title>Lore Podcast</title>
+	</head>
+	<body>
+		<a href="../../index.html" id="back-button">Back to Developer Page</a>
+		<div id="wrapper">
+		<header>
+			<h1>Lore Podcast</h1>
+			<div id="banner-container">
+				<div id="logo-container">
+					<a href="index.html">
+						<picture id="logo">
+							<source media="(max-width: 740px)" srcset="images/lore-logo-small.svg">
+							<img src="images/lore-logo-small.svg" alt="Lore Podcast Logo">
+						</picture>
+					</a>
+				</div>
+				<div id="tagline-container">
+					<p id="tagline">Sometimes the <span class="tag-effect">truth</span> is more <span class="tag-effect">frightening</span> than fiction</p>
+				</div>
+			</div>
+			
+			<nav>
+				<div id="header-nav">
+					<a href="more-lore.html" class="hz-block">Episodes</a>
+					<a href="about.html" class="hz-block">About</a>
+					<input type="checkbox" id="menu-toggle">
+					<label for="menu-toggle" id="menu-dropdown-btn" class="hz-block">Menu</label>
+					<div id="menu-bucket">
+						<a href="topics.html">Topics</a>
+						<a href="tour-events.html">Tour &amp; Events</a>
+						<a href="contact.html">Contact</a>
+					</div>
+				</div>
+				<div id="header-search">
+					<form action="search-result.html">
+						<input type="text" maxlength="100" placeholder="Search..." id="search-input">
+						<button type="submit" class="search-bar-button">Go</button>
+					</form>
+				</div>
+			</nav>
+		</header>
+		<main id="home-main">
+			<div class="episode-flex">
+				
+				<h2 id="index-title">Newest Episode</h2>
+					<p class="ep-title">Episode 123: Unnoticed</p>
+				<div id="episode-player" class="button-card player-card">
+					<a href="topics.html" class="topic-icon player-topic-icon"><div>
+						<img src="images/ep-icon-ghost-sm.png" alt="A figure of a friendly ghost.">
+						<p>Ghosts</p>
+					</div></a>
+					<div class="player-details">
+						<div class="player-headers">
+							<p class="player-ep-title">Unnoticed</p>
+							<p class="player-ep-number">Lore - #123</p>
+						</div>
+						<div class="player-controls">
+							<div id="play-button">
+								<a href="">
+									<img src="images/play.svg" alt="Play button with rounded edges">
+								</a>
+							</div>
+							<div id="skip-back-button">
+								<a href="">
+									<img src="images/skip-back.svg" alt="Skip back circular arrow facing to the left with the number 30 inside.">
+								</a>
+							</div>
+							<div id="skip-fwd-button">
+								<a href="">
+									<img src="images/skip-fwd.svg" alt="Skip forward circular arrow facing to the right with the number 30 inside.">
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="ep-desc">
+					<p>Home might very well be what you make it, but it's not always about beautiful decorations and comfortable furnishings. Sometimes the places we live take on elements of our own personality. <a href="#" class="inbox-link">Read more.</a></p>
+				</div>
+			</div>
+
+			<div class="buttons-flex">
+				<div class="button-card episode-button-link"><a href="episode.html">Episode Notes</a></div>
+				<div class="button-card episode-button-link"><a href="episode.html">Previous Episode</a></div>
+			</div>
+			
+			<div class="tour-flex">
+				<h2>Come join us on tour!</h2>
+				<a href="tour-events.html">		
+					<picture>
+						<source srcset="images/tour-logo-lg-1x.png 1x, images/tour-logo-lg-2x.png 2x" media="(min-width: 680px)">
+						<img id="tour-banner" src="images/tour-logo-sm.png" srcset="images/tour-logo-sm.png 1x, images/tour-logo-sm-2x.png 2x" alt="Tour Information Banner">
+					</picture>
+				</a>
+				<p>Join Aaron Mahnke for an unforgettable evening of true, dark tales. <a href="tour-events.html" class="inbox-link">Get dates & times</a>.</p>
+			</div>
+
+			<div class="how-to-listen-flex">
+				<h2>How to Listen</h2>
+				<div class="links-flex">
+					<div class="apple-link button-card">
+						<a href="http://www.applepodcasts.com/lore"><span class="fas fa-podcast fa-lg"></span>&nbsp;Podcasts</a>
+					</div>
+					<div class="spotify-link button-card">
+						<a href="https://open.spotify.com/show/25PdDOYwfXDFvZ4pI1JWDh"><span class="fab fa-spotify fa-lg"></span>&nbsp;Spotify</a>
+					</div>
+					<div class="stitcher-link button-card">
+						<a href="https://www.stitcher.com/podcast/aaron-mahnke/lore"><span class="fas fa-microphone-alt fa-lg"></span>&nbsp;Stitcher</a>
+					</div>
+				</div>
+			</div>
+			
+			<div class="book-series-main">
+				<h2>The World of Lore</h2>
+				<picture>
+					<source srcset="images/book-series-lg.png 1x, images/book-series-2x.png 2x" media="(min-width: 680px)">
+						<img id="book-series-banner" src="images/book-series-med.png" alt="The world of lore book series banner features the cover of all three titles. The heading reads 'Get the book series'">
+				</picture>
+				<p>The book series features threee titles focusing on some of the more popular episodes from the podcast. Published by Penguin Random House, the thematic volumes include rare notes, as well as gorgeous illustrations and unique typography. <a href="https://www.amazon.com/s?k=world+of+lore" class="inbox-link">Buy them today!</a></p>
+			</div>
+		</main>
+		<footer>
+			<div id="social">
+				<p>
+					<a href="http://www.facebook.com/lorepodcast"><span class="fab fa-facebook-square fa-lg"></span></a>
+					<a href="http://instagram.com/lorepodcast"><span class="fab fa-instagram fa-lg"></span></a>
+					<a href="https://www.snapchat.com/"><span class="fab fa-snapchat-square fa-lg"></span></a>
+					<a href="https://twitter.com/lorepodcast"><span class="fab fa-twitter-square fa-lg"></span></a>
+				</p>
+			</div>
+			
+			<nav id="footer-nav">
+				<ul>
+					<li><a href="index.html">Home</a></li>
+					<li><a href="about.html">About</a></li>
+					<li><a href="more-lore.html">More Lore</a></li>
+					<li><a href="topics.html">Topics</a></li>
+					<li><a href="tour-events.html">Tour & Events</a></li>
+					<li><a href="contact.html">Contact</a></li>
+				</ul>
+			</nav>
+			<p>All images are copyrighted by their respective owners and are used in these samples for demonstration and educational purposes only.</p>
+			<p id="copy">Copyright &copy; Marlon Castillo Designs</p>
+		</footer>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,700 @@
+/*
+ * CSS for the Lore podcast webpage
+ * Author: Marlon Castillo
+ * September 17, 2019
+ */
+@import url('https://fonts.googleapis.com/css?family=Amatic+SC|Anaheim|Open+Sans+Condensed:300&display=swap');
+
+#wrapper { margin: 0 auto;
+   min-width: 304px;
+   max-width: 1204px;
+}
+
+body { background-color: rgb(46,46,46);
+   color: rgb(255,255,255);
+	font-family: 'Anaheim', sans-serif;
+}
+
+#back-button { display: block;
+   background-color: rgb(146,0,0);
+   color: rgb(255,255,255);
+   padding: 0.75rem 0.5rem;
+   width: max-content;
+   margin-left: 0;
+   text-decoration: none;
+}
+
+#back-button::before { display: inline-block;
+   content: '';
+   width: 0;
+   border-top: 0.25rem solid transparent;
+   border-bottom: 0.25rem solid transparent;
+   border-right: 0.5rem solid rgb(255,255,255);
+   margin-right: 0.5rem;
+}
+
+header nav a, main a, footer a  { text-decoration: none;
+   color: rgb(255,255,255);
+}
+
+#footer-nav a { text-transform: uppercase;
+   text-decoration: underline;
+}
+
+#footer-nav, header nav, #header-nav label { font-family: 'Open Sans Condensed', sans-serif;
+}
+
+footer { text-align: center;
+   border-top: 0.15rem solid rgb(165,165,165);
+}
+
+#copy { font-size: 0.75rem;
+}
+
+h1 { position: absolute;
+   top: -1000px;
+}
+
+h1, h2 { font-family: 'Amatic SC', sans-serif;
+}
+
+h2 { font-size: 3rem;
+	margin: 0.25rem auto;
+	text-align: center;
+}
+
+h3 { font-family: 'Open Sans Condensed', sans-serif;
+}
+
+#index-title { margin-bottom: 0;
+}
+
+.ep-title { margin-top: 0;
+   text-align: center;
+}
+
+#banner-container {  align-items: center;
+   margin: 0.25rem auto;
+	background-color: rgba(26,26,26,.8);
+	border-radius: 0.4rem;
+}
+
+#logo-container { width: 40%;
+   padding: 0.7rem;
+}
+
+#tagline-container { margin: inherit;
+}
+
+#tagline { font-family: 'Amatic SC', sans-serif;
+   text-transform: uppercase;
+   text-align: center;
+   font-size: 1.5rem;
+}
+
+.tag-effect { color: rgb(220,20,0);
+   font-weight: bold;
+   font-size: 1.75rem;
+}
+
+ul { list-style-type: none;
+   margin: 0;
+   padding: 0;
+   overflow: hidden;
+}
+
+#menu-toggle { display: none;
+}
+
+header nav a, #header-nav label { padding: 0.75rem;
+   font-size: 1.25rem;
+   font-weight: bold;
+}
+
+.hz-block { display: inline-block;
+}
+
+header nav div#header-nav, 
+header nav div#header-search { background-color: rgb(146,0,0);
+}
+
+header nav div#header-nav { text-align: center;
+   margin: 0 auto;
+}
+
+#header-search { padding-top: 0.5rem;
+   padding-bottom: 0.5rem;
+   border-bottom-left-radius: 4px;
+   border-bottom-right-radius: 4px;
+   text-align: center;
+   max-width: 435px;
+   margin: 0 auto;
+}
+
+#header-search input[type=text] { padding: 0.5rem;
+   width: 80%;
+   border: none;
+   border-radius: 4px;
+}
+
+#header-search button.search-bar-button { width: 10%;
+   padding: 0.5rem;
+   border: none;
+   background-color: rgb(255,255,255);
+   border-radius: 4px;
+   max-width: 40px;
+}
+
+#menu-bucket a { display: block;
+}
+
+#menu-bucket { max-height: 0;
+   overflow: hidden;
+   position: relative;
+   transition: max-height 0.25s ease-in-out;
+   -moz-transition: max-height 0.25s ease-in-out;
+}
+
+#menu-dropdown-btn::after { content: '';
+   border-top: 7px solid rgb(255,255,255);
+   border-left: 7px solid transparent;
+   border-right: 7px solid transparent;
+   display: inline-block;
+   vertical-align: middle;
+   margin-left: 0.5rem;
+   transition: transform .2s ease-out;
+}
+
+#menu-toggle:checked ~ div#menu-bucket {
+   max-height: 205px;
+}
+
+#menu-toggle:checked + #menu-dropdown-btn::after {
+   transform: rotate(90deg) translateX(-3px);
+}
+
+.active { border-bottom: 0.2rem solid rgb(255,255,255);
+}
+
+.inbox-link { font-weight: bold;
+   text-decoration: underline;
+}
+
+.buttons-flex, .episode-page-buttons-bucket { display: flex;
+   flex-direction: row;
+   justify-content: space-around;
+   align-items: center;
+   margin-bottom: 1rem;
+}
+
+.about-episode-page-link a, .about-episode-prev-link a {
+   display: block;
+   padding: 0.75rem;
+   margin: 0.5rem;
+   background-color: rgb(146,0,0);
+   border-radius: 0.5rem;
+}
+
+.button-card { background-color: rgb(146,0,0);
+   margin: 0.25rem auto;
+	box-shadow: 0 4px 8px 0 hsla(0,0%,0%,0.2), 0 6px 20px 0 hsla(0,0%,15%,0.19);
+}
+
+.episode-button-link, .links-flex div,
+   .other-works-button { width: 45%;
+}
+
+.episode-button-link a, .links-flex a,
+   .other-works-button a { display: block;
+   padding: 0.75rem 0;
+   font-weight: bold;
+   text-align: center;
+}
+
+figure { margin: 0 auto;
+}
+
+#tour-banner { width: 100%;
+}
+
+#author-photo { width: 100%;
+}
+
+.how-to-listen-flex, .links-flex, .ep-desc,
+ #banner-container, .player,
+ .ep-details, .player-details { display: flex;
+   flex-direction: column;
+   justify-content: space-around;
+}
+
+.ep-desc { align-items: center;
+}
+
+.how-to-listen-flex { margin-bottom: 2.5rem;
+}
+
+#social span { padding-left: 0.175rem;
+   padding-right: 0.175rem;
+}
+
+.player { align-items: center;
+   background-color: rgba(175, 175, 175, 0.699);
+}
+
+.media-ctrls { display: flex;
+   flex-flow: row nowrap;
+   justify-content: space-around;
+}
+
+#player { border-radius: 0.25em;
+	border: 2px solid rgb(146,0,0);
+	display: flex;
+	align-content: center;
+}
+
+#author-photo img { width: 100%;
+}
+
+figcaption { font-style: italic;
+   font-size: 0.8rem;
+}
+
+.italic { font-style: italic;
+}
+
+.filters-container { display: flex;
+   flex-flow: row wrap;
+   justify-content: space-around;
+	padding-bottom: 1rem;
+	border-bottom: 0.15rem solid rgb(165,165,165);
+}
+
+.filters-container p { margin-top: 0.25rem;
+   margin-bottom: 0.25rem;
+}
+
+#filters { width: 50%;
+   text-transform: uppercase;
+   background-color: rgb(146,0,0);
+   color: rgb(255,255,255);
+   font-family: 'Open Sans Condensed', sans-serif;
+   font-size: 1rem;
+   border: none;
+   border-radius: 0.25rem;
+}
+
+.ep-tile, .ep-list { display: flex;
+   align-items: center;
+   flex-direction: row;
+}
+.ep-list { flex-wrap: wrap;
+   justify-content: space-between;
+	margin-bottom: 1rem;
+	padding-top: 1rem;
+}
+
+.ep-tile { flex-wrap: nowrap;
+   justify-content: space-around;
+   padding: 0.25rem;
+   margin: 0.25rem auto;
+}
+
+.topic-icon { background-color:  rgb(46,46,46);
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   border-radius: 0.25rem;
+   width: 18%;
+   padding: inherit;
+   box-shadow: 0 4px 8px 0 hsla(0, 0%, 0%, 0.2), 0 6px 20px 0 hsla(0, 100%, 35%,0.19);
+}
+
+.topic-page-bucket { background-color: rgb(46,46,46);
+   border-radius: 0.25rem;
+   padding: 0.25rem;
+   margin: 0 auto;
+   width: 40%;
+   box-shadow: 0 4px 8px 0 hsla(0, 0%, 0%, 0.2), 0 6px 20px 0 hsla(0, 100%, 35%,0.19);
+}
+
+.topic-page-bucket img { display: block;
+   margin: 0 auto;
+}
+
+.topic-page-container { padding: 1.5rem 0.5rem 0.25rem 0.5rem;
+   margin: 1rem auto;
+   max-width: 320px;
+   border-radius: 5px
+}
+
+.ep-details { width: 60%;
+}
+
+.ep-tile-title { font-weight: bold;
+}
+
+.ep-tile-content { margin: 0.5rem 0;
+}
+
+.ep-tile-desc { font-size: 0.9rem;
+}
+
+.topic-icon p, .topic-page-bucket p { margin: 0;
+	font-family: 'Amatic SC', sans-serif;
+	font-size: 0.85rem;
+	text-align: center;
+}
+
+.topic-page-bucket p { font-size: 1.5rem;
+}
+
+.tour-buttons { display: flex;
+   flex-flow: row wrap;
+   justify-content: space-around;
+   margin-bottom: 1rem;
+}
+
+.tour-date { width: 45%;
+   margin: 0.25rem;
+   border: 1px solid rgb(255,255,255);
+}
+
+.tour-date p { text-align: center;
+}
+
+.tour-city { text-transform: uppercase;
+   font-size: 1.25rem;
+   font-weight: bold;
+   margin: 0.25rem auto;
+}
+
+.tour-cal { margin-bottom: 0.25rem;
+   color: rgb(165,165,165);
+   margin-top: 0;
+}
+
+.tour-loc { margin-top: 0.25rem;
+   margin-bottom: 0;
+	font-size: 0.8rem;
+}
+
+.tour-date a { display: block;
+   padding: 0.9rem 0.2rem;
+}
+
+#sponsor{ font-weight: bold;
+}
+
+.sources ol { padding-left: 1.25rem;
+}
+
+.offer { text-transform: uppercase;
+   font-weight: bold;
+}
+
+.player-topic-icon { padding: 0.25rem;
+   background-color: rgb(146,0,0);
+   border-radius: initial;
+   box-shadow: initial;
+}
+
+.player-headers, .player-controls { color: rgb(255,255,255);
+}
+
+.player-ep-title { margin: 0.5rem auto 0.15rem auto;
+   text-align: center;
+}
+
+.player-ep-number { font-size: 0.7rem;
+   margin-top: 0;
+   text-align: center;
+}
+
+.player-card { border-radius: 0.25rem;
+   border: 2px solid rgb(146,0,0);
+   display: flex;
+   flex-flow: row nowrap;
+   background-color: transparent;
+}
+
+.player-details { align-items: center;
+   width: 82%;
+}
+
+.player-controls { display: flex;
+   flex-flow: row nowrap;
+   justify-content: space-around;
+   align-items: center;
+   background-color: hsla(0, 0%, 10%, 0.8);
+}
+
+#play-button { padding: 2% 0;
+}
+
+#skip-fwd-button, #skip-back-button, #play-button { width: 18px;
+}
+
+.episode-section { display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.other-works-section, .sources { margin-bottom: 2.5rem;
+}
+
+#other-works-illustration { display: block;
+   margin: 0 auto;
+   width: 100%;
+   max-width: 320px;
+}
+
+#episode-page-player, .episode-page-buttons-bucket,
+   .player-controls { width: 100%;
+}
+
+.form-container { margin: 0;
+   box-sizing: border-box;
+}
+
+.column-75 input[type=text], .column-75 input[type=email],
+   .column-75 select, .column-75 textarea { width: 90%;
+   padding: 0.75rem;
+   border: none;
+   border-radius: 5px;
+}
+
+.column-25 { padding: 0.5rem 0;
+   margin: 1rem 0 0 0;
+}
+
+.form-button { border: none;
+   color: rgb(255,255,255);
+   padding: 0.75rem;
+   width: 40%;
+   margin: 1rem;
+   cursor: pointer;
+   font-weight: bold;
+   font-size: 1rem;
+}
+
+#book-series-banner { display: block;
+   width: 100%;
+   margin: 0 auto;
+}
+
+@media only screen and (min-width: 384px){
+   #logo-container { max-width: 140px;
+   }
+
+   .ep-tile { max-width: 376px;
+   }
+   
+   #filters { max-width: 250px;
+   }
+
+/* end 400px media query*/}
+
+@media only screen and (min-width: 404px){
+   .episode-flex, .buttons-flex,
+   .tour-flex, .how-to-listen-flex { max-width: 55ch;
+   }
+
+   #episode-player, #episode-page-player { max-width: 50ch;
+   }
+
+   .buttons-flex div { max-width: 22ch;
+   }
+
+   #tour-banner { max-width: 404px;
+   }
+
+   .tour-content img { float: left;
+      margin: 0 0.5rem 0.5rem 0;
+   }
+
+   #home-main { display: flex;
+      align-content: center;
+      flex-flow: column wrap;
+   }
+
+   .tour-date { max-width: 250px;
+   }
+
+   #schedule-sub { text-align: center;
+   }
+	
+	.episode-page-buttons-bucket div { max-width: 182px;
+	}
+
+/* end 420px media query*/}
+
+@media only screen and (min-width: 444px) {
+   #author-photo { float: left;
+      margin: 0 0.5rem 0.5rem 0;
+      max-width: 410px;
+   }
+
+   .after-pic-section { clear: both;
+   }
+
+   .other-works-section { display: flex;
+      flex-direction: row;
+   }
+
+   #other-works-illustration { margin: 0 0.5rem 0.5rem 0;
+      width: 320px;
+   }
+
+   .works-section-details { display: flex;
+      flex-direction: column;
+   }
+
+   .other-works-button { max-width: 181px;
+   }
+
+   .book-series-main { max-width: 600px;
+   }
+
+/* end 460px media query*/}
+
+@media only screen and (min-width: 664px){
+   #banner-container { flex-direction: row;
+		margin-top: 0.25rem;
+		margin-left: auto;
+		margin-right: auto;
+		max-width: 790px;
+		position: relative;
+		margin-bottom: -2.8rem;
+		z-index: 1;
+   }
+	
+	#banner-container #logo-container { margin-left: 3rem;
+	}
+	
+	#banner-container p#tagline { margin-bottom: 7rem;
+	}
+	
+	header nav { display: flex;
+		flex-direction: column-reverse;
+	}
+	
+   header nav, #header-nav, #header-search,
+   .episode-button-link, .links-flex div { width: 100%;
+	}
+	
+	#header-search { border-radius: 4px 4px 0 0;
+		position: relative;
+      z-index: 2;
+      margin-left: auto;
+      margin-right: 0;
+	}
+
+   #topics-list { display: flex;
+   }
+
+   #more-main, #events-main, 
+	#contact-main, #other-works-main { max-width: 100ch;
+      margin: 0 auto;
+   }
+
+   #topics-main { max-width: 140ch;
+      margin: 0 auto;
+   }
+
+   #home-main, #topics-list { flex-flow: row wrap;
+      justify-content: center;
+   }
+
+   #home-main { align-items: center;
+   }
+
+   #about-main, #search-main { max-width: 95ch;
+      margin: 0 auto;
+   }
+
+   #episode-main { max-width: 95ch;
+      margin: 0 auto;
+   }
+
+   .buttons-flex { flex-direction: column;
+      justify-content: center;
+   }
+
+   .buttons-flex, .how-to-listen-flex { margin-right: 2rem;
+   }
+
+   .episode-button-link a, .links-flex a { padding: 0.75rem;
+   }
+
+   footer ul li { display: inline-block;
+      margin: auto 2%;
+   }
+	
+	.episode-section { flex-direction: row;
+		justify-content: center;
+	}
+	
+	.episode-page-buttons-bucket { flex-direction: column;
+		width: 185px;
+		margin: 0;
+	}
+	
+	#episode-page-player { margin: 0 0.25rem 0 0;
+	}
+	
+	.sources ol { max-width: 75ch;
+		margin: 0 auto;
+   }
+
+   .column-25 { width: 25%;
+   }
+
+   .column-75 { width: 75%;
+   }
+
+   .row, .button-row { display: flex;
+      flex-direction: row;
+   }
+
+   .button-row { justify-content: center;
+   }
+
+   .form-button { max-width: 242px;
+   }
+
+   #menu-dropdown-btn, a.close { display: none;
+   }
+
+   div#menu-bucket a { display: block;
+   }
+
+   #menu-bucket { display: inline-flex;
+      max-height: 100%;
+      margin-bottom: -1.125rem;
+   }
+/* end 680px media query */}
+
+@media only screen and (min-width: 1008px){
+   
+	
+	#banner-container { margin-bottom: 0.25rem;
+	}
+	
+	header nav {flex-flow: row;
+	}
+	
+	#header-search { border-radius: initial;
+	}
+	
+	#banner-container p#tagline { margin-bottom: 2rem;
+   }
+   
+   .works-section-button-group { display: flex;
+      justify-content: space-around;
+      width: 100%;
+   }
+
+   .other-podcast-btn { max-width: 30%;
+   }
+/* end 1024px media query */}

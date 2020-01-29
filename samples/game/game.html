@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Marlon Castillo">
+    <meta name="description" content="A brief tile puzzle game using jQuery scripts for its logic.">
+    <link rel="stylesheet" href="game.css" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Anton|Zilla+Slab:400,400i,700" rel="stylesheet"> 
+    <title>Tile Game</title>	
+  </head>
+  <body>
+    <header>
+      <nav>
+        <a href="../../index.html" id="back-button">Back to Developer Page</a>
+      </nav>
+      <h1>Tile Puzzle Game</h1>
+    </header>
+    <main>
+      <div id="dashboard">
+        <h2>Rules</h2>
+        <p>The puzzle tiles will shuffle themselves 5 seconds after the page loads.</p>
+        <p>You can only slide tiles that are adjacent to the blank tile.</p>
+        <p>Time will begin counting on first move.</p>
+        <div id="board">
+          <div id="grid">
+            <div class="tile"><img src="images/SockeyOneRow1A.jpg"></div>
+            <div class="tile"><img src="images/SockeyOneRow1B.jpg"></div>
+            <div class="tile"><img id="blank" src="images/blank.jpg"></div>
+            <div class="tile"><img src="images/SockeyOneRow2A.jpg"></div>
+            <div class="tile"><img src="images/SockeyOneRow2B.jpg"></div>
+            <div class="tile"><img src="images/SockeyOneRow2C.jpg"></div>
+            <div class="tile"><img src="images/SockeyOneRow3A.jpg"></div>
+            <div class="tile"><img src="images/SockeyOneRow3B.jpg"></div>
+            <div class="tile"><img src="images/SockeyOneRow3C.jpg"></div>
+          </div>
+          <div id="menu">
+            <h2>Time</h2>
+            <p id="timer">0m 0s</p>
+            <button type="button" onclick="refresh()">Restart</button>
+          </div>
+        </div>
+      </div>
+      <!-- Need to add section with code for game behavior. -->
+    </main>
+    <footer>
+      <p>View <a href="code.html">source code</a></p>
+      <p>Photo of feline friend "Sockey" by Professor Dan Hall.</p>
+      <p id="copyright">Website design, game programming, and logic by <a href="../../index.html">Marlon Castillo</a>.</p>
+    </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="scripts/game.js" type="text/javascript"></script>
+  </body>
+</html>
