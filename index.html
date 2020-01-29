@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+         <meta charset="utf-8">
+         <meta name="author" content="Marlon Castillo">
+         <meta name="description" content="Marlon Castillo is a Web Developer local to the DC, Maryland, and Virginia area. Marlon specializes in building responsive and fully accessible websites as well as developing front-end and back-end apps.">
+         <meta name="viewport" content="widht=device-width, initial-scale=1">
+         <link rel="stylesheet" type="text/css" href="display.css">
+         <title>Marlon Castillo - Programming &amp; Design</title>
+         <style type="text/css">
+            .hidden { display:none;
+            }
+         </style>
+    </head>
+    <body>
+      <div id="wrapper">
+         <main>
+            <div id="card">
+               <div class="card-section personal">
+                  <div class="row">
+                     <div id="photo-container">
+                        <picture>
+                           <source media="(min-width: 680px)" srcset="images/photo-lg.jpg 2x, images/photo-med.jpg 1x">
+                           <img src="images/photo-sm.jpg" alt="Marlon is a broad, tall, mocha-skinned young man with a light beard and long, curly hair. It flows in the wind as he looks at the camera with a pleased smile while he wears a light pink tee under a light denim jacket." srcset="images/photo-med.jpg 2x, images/photo-sm.jpg 1x" id="marlon-photo">
+                        </picture>
+                     </div>
+                     <div class="name">
+                        <h1>Marlon Castillo</h1>
+                        <div class="social">
+                        <ul id="social-links">
+                           <li><a href="https://www.linkedin.com/in/marlon-castillo-lopez-112472198"><img src="images/linkedin-icon.svg" alt="LinkedIn social media icon - a square with the word in outlined inside."></a></li>
+                           <li><a href="https://twitter.com/Marlon90382985"><img src="images/twitter-icon.svg" alt="Twitter social media icon - the profile of a bird mid-flight."></a></li>
+                           <li><a href="https://www.instagram.com/wanderingmidnight/"><img src="images/ig-icon.svg" alt="Instagram social media icon - a square with rounded corners with a circle inside, similar to the lens of a camera."></a></li>
+                        </ul>
+                  </div><!-- end social section -->
+                     </div><!-- end details container -->
+                  </div>
+                  <div class="bio">
+                     <p id="bio">Junior full stack developer who focuses on producing responsive, accessible websites and apps using JavaScript, jQuery, and PHP. Also experienced in MySQL, Java, C++, and working in UNIX/LINUX systems.</p>
+                  </div>
+               </div><!-- end personal details container-->
+
+               <div class="card-section education">
+                  <h2>Education</h2>
+                  <p>I graduated from <a href="https://www.aacc.edu/" class="body-link">Anne Arundel Community College</a> in Arnold, MD with an Associate of Applied Science (A.A.S.) degree in Internet Application Development.</p>
+                  <p>I also achieved a certificate in Computer Information Systems&mdash;Scientific Programming due to my focus on software design, high-level programming languages, and UNIX/LINUX.</p>
+               </div><!-- end education section -->
+
+               <div class="card-section samples">
+                  <h2>Work Samples</h2>
+                  <div id="samples-grid">
+                     <div class="sample-card"><a href="samples/book/index.html">
+                        <picture>
+                           <!-- add art-directed image -->
+                           <img src="images/book-sm-1x.png" alt="A thumbnail for a web page for the book The Golden Compass by Philip Pullman." srcset="images/book-sm-2x.png 2x, images/book-sm-1x.png 1x">
+                        </picture>
+                        <div class="card-title">
+                           <p>Single-page website for a book developed as a class project.</p>
+                        </div><!-- end card title -->
+                     </a></div><!-- end sample card-->
+
+                     <div class="sample-card"><a href="samples/podcast/index.html">
+                        <picture>
+                           <!-- add art-directed image -->
+                           <img src="images/podcast-sm-1x.png" alt="A thumbnail for a web page for the Lore podcast series by Aaron Mahnke." srcset="images/podcast-sm-2x.png 2x, images/podcast-sm-1x.png 1x">
+                        </picture>
+                        <div class="card-title">
+                           <p>Responsive website for a podcast developed as a class project.</p>
+                        </div><!-- end card title -->
+                     </a></div><!-- end sample card-->
+
+                     <div class="sample-card"><a href="samples/conf/index.html">
+                        <picture>
+                           <!-- add art-directed image -->
+                           <img src="images/conference-sm-1x.png" alt="A thumbnail for a web page for the Typographics coference hosted in New York City at The Cooper Union." srcset="images/conference-sm-2x.png 2x, images/conference-sm-1x.png 1x">
+                        </picture>
+                        <div class="card-title">
+                           <p>Multiple page website for a conference developed as a class project.</p>
+                        </div><!-- end card title -->
+                     </a></div><!-- end sample card-->
+
+                     <div class="sample-card"><a href="samples/game/game.html">
+                        <picture>
+                           <!-- add art-directed image -->
+                           <img src="images/game-sm-1x.png" alt="A thumbnail for a web app that is a sliding tile puzzle game from a photo of a black cat." srcset="images/game-sm-2x.png 2x, images/game-sm-1x.png 1x">
+                        </picture>
+                        <div class="card-title">
+                           <p>Sliding tile puzzle game programmed using jQuery. Logic developed as a class project; functionality and design developed as a personal project.</p>
+                        </div><!-- end card title -->
+                     </a></div><!-- end sample card-->
+
+                     <div class="sample-card"><a href="http://ec2-18-188-178-20.us-east-2.compute.amazonaws.com/">
+                        <picture>
+                           <!-- add art-directed image -->
+                           <img src="images/weather-sm-1x.png" alt="A thumbnail for a web app that is a sliding lightweight weather forecast application." srcset="images/weather-sm-2x.png 2x, images/weather-sm-1x.png 1x">
+                        </picture>
+                        <div class="card-title">
+                           <p>Weather forecast app programmed using vanilla JS, developed as a personal project.</p>
+                        </div><!-- end card title -->
+                     </a></div><!-- end sample card-->
+                  </div><!-- end samples grid -->
+               </div><!-- end work samples section -->
+
+               <div class="card-section contact">
+                  <h2>Contact Marlon</h2>
+                  <p>The fastest way for me to respond is via email below. You may also find me on social media by following the links above.</p>
+                  <a id="email" href="mailto:marlon.castillo93@icloud.com">marlon.castillo93@icloud.com</a>
+               </div>
+            </div><!-- end card -->
+         </main>
+         <footer>
+            <p id="copyright">Site content and design by <a class="body-link" href="#card">Marlon Castillo</a></p>
+         </footer>
+      </div><!-- end wrapper -->
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+      <script type="text/javascript">
+         $('html').addClass('hidden');
+         $(document).ready(function() {
+            $('html').removeClass('hidden');
+         });  
+      </script>
+    </body>
+</html>
