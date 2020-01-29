@@ -7,6 +7,24 @@ body { background: hsla(172, 50%, 40%,1);
    margin: 0;
 }
 
+#back-button { display: block;
+   text-decoration: none;
+   padding: 1rem;
+   background-color: hsla(46, 65%, 52%, 0.9);
+   color: hsl(0, 0%, 100%);
+   width: max-content;
+   margin-left: 0;
+}
+
+#back-button::before { display: inline-block;
+   content: ' ';
+   width: 0;
+   border-top: 0.25rem solid transparent;
+   border-bottom: 0.25rem solid transparent;
+   border-right: 0.5rem solid hsl(0, 0%, 100%);
+   margin-right: 0.5rem;
+}
+
 #wrapper { margin: 0 auto;
    min-width: 304px;
    padding: 0.5rem;
