@@ -27,6 +27,26 @@ body, #photo-container { margin: 0 auto;
    padding: 1.5rem;
    border: 0.2rem solid var(--border-color);
    box-shadow: -0.3rem 0.3rem var(--border-color);
+   transform-origin: top;
+   animation: bouncein 2s ease-out;
+}
+
+@keyframes bouncein {
+   0% { margin-top: 100%;
+      transform: scale(0.95,1.1);
+   }
+   40% { margin-top: 0;
+      transform: scale(1.05, 0.95);
+   }
+   47% { margin-top: 10%;
+      transform: scale(1,1);
+   }
+   54% { margin-top: 0;
+      transform: scale(1,1);
+   }
+   100% { margin-top: 0;
+      transform: scale(1,1);
+   }
 }
 
 #card, div.sample-card, #email { border-radius: 0.2rem;
