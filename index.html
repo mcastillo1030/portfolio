@@ -93,7 +93,25 @@
                <div class="card-section contact">
                   <h2>Contact Marlon</h2>
                   <p>The fastest way for me to respond is via email below. You may also find me on social media by following the links above.</p>
-                  <a id="email" href="mailto:marlon.castillo93@icloud.com">marlon.castillo93@icloud.com</a>
+                  <form id="contact-form">
+                     <div class="form-group">
+                        <input type="text" id="name" name="name" required>
+                        <label for="name">Name</label>
+                     </div>
+                     <div class="form-group">
+                        <input type="text" id="email" name="email" required>
+                        <label for="email">Email</label>
+                     </div>
+                     <div class="form-group">
+                        <textarea id="message" name="message" rows="5" cols="33" required></textarea>
+                        <label for="message">Your message</label>
+                     </div>
+                     <div class="form-group button-group">
+                        <button type="submit" name="submit" id="submit">Send</button>
+                        <button type="reset" id="clear"><span>Clear</span></button>
+                     </div>
+                  </form><!-- end form -->
+                  <!--<a id="email" href="mailto:marlon.castillo93@icloud.com">marlon.castillo93@icloud.com</a>-->
                </div>
             </div><!-- end card -->
          </main>

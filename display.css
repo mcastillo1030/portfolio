@@ -5,10 +5,11 @@
    --border-color: hsl(18, 89%, 72%);
    --accent-color: hsl(348, 53%, 58%);
    --name-font: utopia-std-headline, serif;
-   --bio-font: font-family: acumin-pro, sans-serif;
+   --bio-font: acumin-pro, sans-serif;
    --header-font: utopia-std-subhead, serif;
    --body-font: acumin-pro, sans-serif;
    --button-color: hsl(357, 57%, 53%);
+   --label-color: hsl(96, 3%, 33%);
 }
 
 body { background: var(--page-background);
@@ -28,12 +29,14 @@ body, #photo-container { margin: 0 auto;
    border: 0.2rem solid var(--border-color);
    box-shadow: -0.3rem 0.3rem var(--border-color);
    transform-origin: top;
-   animation: bouncein 2s ease-out;
+   visibility: hidden;
+   animation: bouncein 2s ease-out 1.25s forwards;
 }
 
 @keyframes bouncein {
    0% { margin-top: 100%;
       transform: scale(0.95,1.1);
+      visibility: visible;
    }
    40% { margin-top: 0;
       transform: scale(1.05, 0.95);
@@ -46,10 +49,12 @@ body, #photo-container { margin: 0 auto;
    }
    100% { margin-top: 0;
       transform: scale(1,1);
+      visibility: visible;
    }
 }
 
-#card, div.sample-card, #email { border-radius: 0.2rem;
+#card, div.sample-card, .form-group input,
+.form-group textarea, .form-group button { border-radius: 0.2rem;
 }
 
 img { width: 100%;
@@ -93,7 +98,7 @@ a.body-link { border-bottom: 0.2rem solid var(--button-color);
 #bio::before, div.card-section h2 { margin-bottom: 0.25rem;
 }
 
-#bio::before, #email { margin-left: auto;
+#bio::before { margin-left: auto;
    margin-right: auto;
 }
 
@@ -115,11 +120,11 @@ body a { text-decoration: none;
 a.body-link:hover { border-bottom: none;
 }
 
-div.sample-card, #email { background-color: var(--button-color);
-   border: 0.2rem solid var(--button-color);
+div.sample-card, #submit { background-color: var(--button-color);
 }
 
-div.sample-card { transition: 500ms ease all;
+div.sample-card { border: 0.2rem solid var(--button-color);
+   transition: 500ms ease all;
 }
 
 div.sample-card:hover { transform: scale(1.05);
@@ -133,20 +138,82 @@ div.card-title p { color: var(--card-background);
    margin-bottom: 0.1rem;
 }
 
-#email { display: block;
-   padding: 0.75rem 0.25rem;
+.form-group button { display: block;
+   padding: 0.25rem 0.5rem 0.5rem 0.5rem;
    text-align: center;
-   font-family: var(--header-font);
-   color: var(--card-background);
-   max-width: 16rem;
-   font-size: 0.95rem;
+   font-family: var(--body-font);
+   font-size: 1.15rem;
+   width: 100%;
+   margin-bottom: 1rem;
 }
 
-#email:hover { background-color: var(--card-background);
-   color: inherit;
+#submit { color: var(--card-background);
+   order: 2;
+}
+
+#submit:hover, #clear:hover { cursor: pointer;
+}
+
+#submit:hover { background-color: hsla(357, 57%, 53%, 0.7);
+   border: none /*0.15rem solid hsla(357, 57%, 53%, 0.5)*/;
+}
+
+#clear { color: var(--button-color);
+   background: none;
+}
+
+#clear:hover { border: none;
+}
+
+#clear:hover > span { border-bottom: 0.15rem solid var(--button-color);
 }
 
 div.contact { margin-bottom: 1rem;
+}
+
+#contact-form { width: 100%;
+   font-family: var(--body-font);
+   max-width: 650px;
+}
+
+.form-group { position: relative;
+   margin-bottom: 1.5rem;
+}
+
+.form-group label, .form-group input,
+.form-group textarea { display: block;
+}
+
+.form-group input, .form-group textarea { width: 100%;
+   font-size: 1.15rem;
+   padding: 1.15rem 0.5rem 0.5rem 0.75rem;
+   background: none;
+}
+
+.form-group input, .form-group textarea,
+.form-group button { box-sizing: border-box;
+   border: 0.15rem solid var(--button-color);
+}
+
+.form-group label { position: absolute;
+   top: 0.9rem;
+   left: 0.75rem;
+   color: var(--label-color);
+   pointer-events: none;
+   transition: 300ms ease all;
+}
+
+.form-group textarea { font-family: var(--body-font);
+}
+
+.form-group input:focus { outline: none;
+}
+
+.form-group input:focus ~ label, 
+.form-group input:valid ~ label,
+.form-group textarea:focus ~ label,
+.form-group textarea:valid ~ label { top: 0.15rem;
+   font-size: 0.75rem;
 }
 
 #social-links { padding-left: 0;
@@ -185,6 +252,18 @@ div.contact { margin-bottom: 1rem;
       align-items: center;
       max-width: 540px;
       margin-left: auto;
+      margin-right: auto;
+   }
+
+   .button-group { display: flex;
+      justify-content: space-between;
+   }
+
+   .button-group button { max-width: 15rem;
+      margin-bottom: 0;
+   }
+
+   #contact-form { margin-left: auto;
       margin-right: auto;
    }
 /* end 420px media query */}
