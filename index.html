@@ -90,11 +90,15 @@
                   </div><!-- end samples grid -->
                </div><!-- end work samples section -->
 
+               <div class="card-section personal">
+                  <h2>Other Interests</h2>
+                  <p>Aside from front- and back-end programming, I like to spend my time with friends and family. On my down time I can be found with my nose buried in a good book, from Stephen King to Neil Gaiman. I am also a fervent Marvel Cinematic Universe fan, and am still licking my wounds over the years I devoted to Game of Thrones on HBO only to hate the ending.</p>
+               </div>
+
                <div class="card-section contact">
                   <h2>Contact Marlon</h2>
-                  <p>The fastest way for me to respond is via email below. You may also find me on social media by following the links above.</p>
+                  <p>Send me some information below to discuss any questions or if you'd like to work together.</p>
                   <form id="contact-form" action="http://www.marloncastillo.dev/cgi-sys/formmail.pl" method="post" name="hgmailer">
-                     <!-- http://www.marloncastillo.dev/cgi-sys/formmail.pl -->
                      <div class="form-group">
                         <input type="text" id="name" name="name" required>
                         <label for="name">Name</label>
@@ -125,6 +129,10 @@
             </div><!-- end card -->
          </main>
          <footer>
+            <a href="#wrapper" id="to-top-btn">
+               Back to Top
+               <span></span>
+            </a>
             <p id="copyright">Site content and design by <a class="body-link" href="#card">Marlon Castillo</a></p>
          </footer>
       </div><!-- end wrapper -->
@@ -133,6 +141,19 @@
          $('html').addClass('hidden');
          $(document).ready(function() {
             $('html').removeClass('hidden');
+
+            $('#to-top-btn').on('click',function (e) {
+               e.preventDefault();
+
+               var target = this.hash;
+               var $target = $(target);
+
+               $('html, body').stop().animate({
+                  'scrollTop': $target.offset().top
+               }, 1200, 'swing', function () {
+                  window.location.hash = target;
+               });
+            });
          });  
       </script>
       <script src="scripts/contact.js" type="text/javascript"></script>

@@ -60,7 +60,9 @@ body, #photo-container { margin: 0 auto;
 img { width: 100%;
 }
 
-#photo-container { max-width: 150px;
+#photo-container { max-width: 200px;
+   min-width: 140px;
+   width: 50%;
 }
 
 #marlon-photo { border-radius: 50%;
@@ -98,13 +100,16 @@ a.body-link { border-bottom: 0.2rem solid var(--button-color);
 #bio::before, div.card-section h2 { margin-bottom: 0.25rem;
 }
 
-#bio::before { margin-left: auto;
+#bio::before, #to-top-btn,
+#to-top-btn span { margin-left: auto;
    margin-right: auto;
 }
 
-div.card-section h2 { font-family: var(--header-font);   
-   font-weight: 700;
+div.card-section h2, #to-top-btn { font-family: var(--header-font);
    text-transform: lowercase;
+}
+
+div.card-section h2 { font-weight: 700;
    margin-top: 3rem;
 }
 
@@ -138,24 +143,23 @@ div.card-title p { color: var(--card-background);
    margin-bottom: 0.1rem;
 }
 
-.form-group button { display: block;
-   padding: 0.25rem 0.5rem 0.5rem 0.5rem;
+.form-group button { padding: 0.25rem 0.5rem 0.5rem 0.5rem;
    text-align: center;
    font-family: var(--body-font);
-   font-size: 1.15rem;
    width: 100%;
    margin-bottom: 1rem;
 }
 
 #submit-btn { color: var(--card-background);
    order: 2;
+   font-weight: 700;
 }
 
 #submit-btn:hover, #clear:hover { cursor: pointer;
 }
 
 #submit-btn:hover { background-color: hsla(357, 57%, 53%, 0.7);
-   border: none /*0.15rem solid hsla(357, 57%, 53%, 0.5)*/;
+   border: none;
 }
 
 #clear { color: var(--button-color);
@@ -181,26 +185,29 @@ div.contact { margin-bottom: 1rem;
 }
 
 .form-group label, .form-group input,
-.form-group textarea { display: block;
+.form-group textarea,
+.form-group button, 
+a#to-top-btn { display: block;
 }
 
 .form-group input, .form-group textarea { width: 100%;
-   font-size: 1.15rem;
-   padding: 1.15rem 0.5rem 0.5rem 0.75rem;
+   padding: 1.25rem 0.5rem 0.5rem 0.75rem;
    background: none;
 }
 
 .form-group input, .form-group textarea,
 .form-group button { box-sizing: border-box;
    border: 0.15rem solid var(--button-color);
+   font-size: 1rem;
 }
 
 .form-group label { position: absolute;
-   top: 0.9rem;
+   top: 0.7rem;
    left: 0.75rem;
    color: var(--label-color);
    pointer-events: none;
    transition: 300ms ease all;
+   font-size: 1.15rem;
 }
 
 .form-group textarea { font-family: var(--body-font);
@@ -241,8 +248,27 @@ div.contact { margin-bottom: 1rem;
 #social-links li a img:hover { filter: opacity(70%);
 }
 
-#copyright { margin-top: 4rem;
-   color: var(--card-background);
+#to-top-btn { color: var(--border-color);
+   font-size: 1.5rem;
+   width: max-content;
+}
+
+#to-top-btn:hover > span { width: 100%;
+}
+
+#to-top-btn span { content: '';
+   height: 0.2rem;
+   width: 0;
+   box-sizing: border-box;
+   background-color: var(--border-color);
+   transition: 400ms ease all;
+   display: block;
+}
+
+#to-top-btn, #copyright { margin-top: 3rem;
+}
+
+#copyright { color: var(--card-background);
 }
 
 #samples-grid { margin-top: 1.25rem;
@@ -252,19 +278,6 @@ div.contact { margin-bottom: 1rem;
 }
 
 @media only screen and (min-width: 530px) {
-   #photo-container { margin-left: 0;
-      margin-right: 1.75rem;
-      max-width: 200px;
-   }
-
-   div.row { display: flex;
-      justify-content: space-around;
-      align-items: center;
-      max-width: 540px;
-      margin-left: auto;
-      margin-right: auto;
-   }
-
    .button-group { display: flex;
       justify-content: space-between;
    }
@@ -277,3 +290,17 @@ div.contact { margin-bottom: 1rem;
       margin-right: auto;
    }
 /* end 420px media query */}
+
+@media only screen and (min-width: 640px) {
+   #photo-container { margin-left: 0;
+      margin-right: 1.75rem;
+   }
+
+   div.row { display: flex;
+      justify-content: space-around;
+      align-items: center;
+      max-width: 540px;
+      margin-left: auto;
+      margin-right: auto;
+   }
+/* end 640px media query */}
