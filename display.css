@@ -120,7 +120,7 @@ body a { text-decoration: none;
 a.body-link:hover { border-bottom: none;
 }
 
-div.sample-card, #submit { background-color: var(--button-color);
+div.sample-card, #submit-btn { background-color: var(--button-color);
 }
 
 div.sample-card { border: 0.2rem solid var(--button-color);
@@ -147,14 +147,14 @@ div.card-title p { color: var(--card-background);
    margin-bottom: 1rem;
 }
 
-#submit { color: var(--card-background);
+#submit-btn { color: var(--card-background);
    order: 2;
 }
 
-#submit:hover, #clear:hover { cursor: pointer;
+#submit-btn:hover, #clear:hover { cursor: pointer;
 }
 
-#submit:hover { background-color: hsla(357, 57%, 53%, 0.7);
+#submit-btn:hover { background-color: hsla(357, 57%, 53%, 0.7);
    border: none /*0.15rem solid hsla(357, 57%, 53%, 0.5)*/;
 }
 
@@ -214,6 +214,16 @@ div.contact { margin-bottom: 1rem;
 .form-group textarea:focus ~ label,
 .form-group textarea:valid ~ label { top: 0.15rem;
    font-size: 0.75rem;
+}
+
+.form-group p { display: none;
+   color: var(--button-color);
+   font-size: 0.95rem;
+   margin-top: 0;
+}
+
+#name-err, #email-err, #msg-err {
+   font-style: italic;
 }
 
 #social-links { padding-left: 0;
