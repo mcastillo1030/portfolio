@@ -69,16 +69,16 @@ img { width: 100%;
    border: 0.3rem solid var(--accent-color);
 }
 
-div.name h1 { font-family: var(--name-font);
+h1 { font-family: var(--name-font);
    font-size: 1.8rem;
    text-align: center;
 }
 
-div.name h1, div.card-section h2,
+h1, div.card-section h2,
 div.card-section p { font-style: normal;
 }
 
-div.name h1, #bio, div.card-section p { font-weight: 400;
+h1, #bio, div.card-section p { font-weight: 400;
 }
 
 #bio { font-style: italic;
@@ -94,7 +94,7 @@ div.name h1, #bio, div.card-section p { font-weight: 400;
 #bio::before { border-bottom: 0.2rem solid var(--accent-color);
 }
 
-a.body-link { border-bottom: 0.2rem solid var(--button-color);
+a.body-link, #back-link { border-bottom: 0.2rem solid var(--button-color);
 }
 
 #bio::before, div.card-section h2 { margin-bottom: 0.25rem;
@@ -122,7 +122,7 @@ body a { text-decoration: none;
    color: inherit;
 }
 
-a.body-link:hover { border-bottom: none;
+a.body-link:hover, #back-link:hover { border-bottom: none;
 }
 
 div.sample-card, #submit-btn { background-color: var(--button-color);
@@ -210,7 +210,7 @@ a#to-top-btn { display: block;
    font-size: 1.15rem;
 }
 
-.form-group textarea { font-family: var(--body-font);
+.form-group textarea, #back-link{ font-family: var(--body-font);
 }
 
 .form-group input:focus { outline: none;
@@ -275,6 +275,26 @@ a#to-top-btn { display: block;
    display: grid;
    grid-template-columns: repeat(auto-fill, minmax(12rem, 1fr));
    grid-gap: 1rem 1.5rem;
+}
+
+.back-bucket { padding: 0.25rem 0;
+}
+
+#back-link { display: inline-block;
+   width: max-content;
+}
+
+span.arrow { content: '';
+   display: inline-block;
+   border-top: 0.5rem solid transparent;
+   border-bottom: 0.5rem solid transparent;
+   border-right: 0.5rem solid var(--accent-color);
+   position: relative;
+   margin-right: 0.5rem;
+   vertical-align: middle;
+}
+
+.confirm-body { height: 90vw;
 }
 
 @media only screen and (min-width: 530px) {
