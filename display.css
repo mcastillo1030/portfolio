@@ -284,18 +284,24 @@ form ~ div { height: 0;
    box-sizing: border-box;
    overflow: hidden;
    transition: 500ms ease all;
+   color: var(--card-background);
+}
+
+#success p { margin: 0;
+   font-weight: 700;
+   font-size: 1rem
 }
 
 #success span { display: block;
    margin-left: auto;
-   border-bottom: 0.2rem solid var(--button-color);
+   border-bottom: 0.2rem solid var(--border-color);
 }
 
 #success span:hover { cursor: pointer;
    border-bottom: none;
 }
 
-.expand { border: 0.15rem solid var(--page-background);
+.expand { background-color: hsla(239, 35%, 38%,1);
    border-radius: 0.2rem;
    padding: 1rem;
    height: max-content;
