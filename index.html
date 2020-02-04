@@ -98,33 +98,31 @@
                <div class="card-section contact">
                   <h2>Contact Marlon</h2>
                   <p>Send me some information below to discuss any questions or if you'd like to work together.</p>
-                  <form id="contact-form" action="http://www.marloncastillo.dev/cgi-sys/formmail.pl" method="post" name="hgmailer">
+                  <form id="contact-form" name="contact-form">
                      <div class="form-group">
                         <input type="text" id="name" name="name" required>
                         <label for="name">Name</label>
-                        <p id="name-err"></p>
+                        <p id="name-err" class="error"></p>
                      </div>
                      <div class="form-group">
                         <input type="text" id="email" name="email" required>
                         <label for="email">Email</label>
-                        <p id="email-err"></p>
+                        <p id="email-err" class="error"></p>
                      </div>
                      <div class="form-group">
-                        <textarea id="message" name="comment" rows="5" cols="33" required></textarea>
+                        <textarea id="message" name="message" rows="5" cols="33" required></textarea>
                         <label for="message">Your message</label>
-                        <p id="msg-err"></p>
-                     </div>
-                     <div class="hidden-group">
-                        <input type="hidden" name="recipient" value="marlon@marloncastillo.dev">
-                        <input type="hidden" name="subject" value="Contact request from developer web site">
-                        <input type="hidden" name="redirect" value="https://www.marloncastillo.dev/contact_confirm.html">
+                        <p id="msg-err" class="error"></p>
                      </div>
                      <div class="form-group button-group">
-                        <button name="submit-btn" id="submit-btn">Send</button>
+                        <button type="submit" name="submit" id="submit-btn">Send</button>
                         <button type="reset" id="clear"><span>Clear</span></button>
                      </div>
                   </form><!-- end form -->
-
+                  <div id="success">
+                     <p></p>
+                     <span></span>
+                  </div>
                </div>
             </div><!-- end card -->
          </main>
@@ -137,25 +135,6 @@
          </footer>
       </div><!-- end wrapper -->
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-      <script type="text/javascript">
-         $('html').addClass('hidden');
-         $(document).ready(function() {
-            $('html').removeClass('hidden');
-
-            $('#to-top-btn').on('click',function (e) {
-               e.preventDefault();
-
-               var target = this.hash;
-               var $target = $(target);
-
-               $('html, body').stop().animate({
-                  'scrollTop': $target.offset().top
-               }, 1200, 'swing', function () {
-                  window.location.hash = target;
-               });
-            });
-         });  
-      </script>
-      <script src="scripts/contact.js" type="text/javascript"></script>
+      <script src="scripts/index.js" type="text/javascript"></script>
     </body>
 </html>

@@ -13,7 +13,8 @@
 }
 
 body { background: var(--page-background);
-   background: linear-gradient(to top right, hsla(239,35%,28%,1) 0%, hsla(239, 35%, 38%,1) 35%, hsla(239, 35%, 48%,1) 75%); 
+   background: linear-gradient(to top right, hsla(239,35%,28%,1) 0%, 
+            hsla(239, 35%, 38%,1) 35%, hsla(239, 35%, 48%,1) 75%); 
    max-width: 1024px;
 }
 
@@ -175,7 +176,7 @@ div.card-title p { color: var(--card-background);
 div.contact { margin-bottom: 1rem;
 }
 
-#contact-form { width: 100%;
+#contact-form, #success { width: 100%;
    font-family: var(--body-font);
    max-width: 650px;
 }
@@ -250,7 +251,9 @@ a#to-top-btn { display: block;
 
 #to-top-btn { color: var(--border-color);
    font-size: 1.5rem;
-   width: max-content;
+}
+
+#to-top-btn, #success span { width: max-content;
 }
 
 #to-top-btn:hover > span { width: 100%;
@@ -277,24 +280,25 @@ a#to-top-btn { display: block;
    grid-gap: 1rem 1.5rem;
 }
 
-.back-bucket { padding: 0.25rem 0;
+form ~ div { height: 0;
+   box-sizing: border-box;
+   overflow: hidden;
+   transition: 500ms ease all;
 }
 
-#back-link { display: inline-block;
-   width: max-content;
+#success span { display: block;
+   margin-left: auto;
+   border-bottom: 0.2rem solid var(--button-color);
 }
 
-span.arrow { content: '';
-   display: inline-block;
-   border-top: 0.5rem solid transparent;
-   border-bottom: 0.5rem solid transparent;
-   border-right: 0.5rem solid var(--accent-color);
-   position: relative;
-   margin-right: 0.5rem;
-   vertical-align: middle;
+#success span:hover { cursor: pointer;
+   border-bottom: none;
 }
 
-.confirm-body { height: 90vw;
+.expand { border: 0.15rem solid var(--page-background);
+   border-radius: 0.2rem;
+   padding: 1rem;
+   height: max-content;
 }
 
 @media only screen and (min-width: 530px) {
@@ -306,7 +310,7 @@ span.arrow { content: '';
       margin-bottom: 0;
    }
 
-   #contact-form { margin-left: auto;
+   #contact-form, #success { margin-left: auto;
       margin-right: auto;
    }
 /* end 420px media query */}
